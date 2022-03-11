@@ -51,17 +51,15 @@ contract MyV2FlashLoan is FlashLoanReceiverBase {
         address receiverAddress = address(this);
 
         address[] memory assets = new address[](2);
-        assets[0] = address(INSERT_ASSET_ONE_ADDRESS);
-        assets[1] = address(INSERT_ASSET_TWO_ADDRESS);
+        assets[0] = address(0x001B3B4d0F3714Ca98ba10F6042DaEbF0B1B7b6F);
+        
 
         uint256[] memory amounts = new uint256[](2);
-        amounts[0] = INSERT_ASSET_ONE_AMOUNT;
-        amounts[1] = INSERT_ASSET_TWO_AMOUNT;
+        amounts[0] = 1;
 
         // 0 = no debt, 1 = stable, 2 = variable
         uint256[] memory modes = new uint256[](2);
-        modes[0] = INSERT_ASSET_ONE_MODE;
-        modes[1] = INSERT_ASSET_TWO_MODE;
+        modes[0] = 0;
 
         address onBehalfOf = address(this);
         bytes memory params = "";
